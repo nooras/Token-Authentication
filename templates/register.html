@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        {%with messages = get_flashed_messages()%}
+            {%if messages%}
+            {% for message in messages %}
+
+            <div class="alert alert-success alert-dismissable" role="alert">
+
+                <button type="button" class="close" data-dismiss="alert" aria-label ="close">
+
+                    <span aria-hidden="true">&times;</span>
+
+                </button>
+                {{message}}
+        
+            </div>
+
+            {%endfor%}
+            {%endif%}
+        {%endwith%}
+
+        <form method="POST" action="{{ url_for('sendotp') }}" class="card-body col-md-6 offset-md-3">
+
+            <h3>Registeration Form</h3>
+
+            <div>
+                <div class="md-form mb-3">
+                    <input type="text" id="username" name="username" class="form-control"
+                    placeholder="username">
+                </div>
+
+                <div class="md-form mb-3">
+                    <input type="text" id="email" name="email" class="form-control"
+                    placeholder="email">
+                </div>
+                <div class="md-form mb-3">
+                    <input type="text" id="phone" name="phone" class="form-control"
+                    placeholder="phone">
+                </div>
+                <div class="md-form mb-3">
+                    <input type="password" id="password" name="password" class="form-control"
+                    placeholder="password">
+                </div>
+                <div class="md-form mb-3">
+                    <input type="password" id="confirm_password" name="confirm_password" class="form-control"
+                    placeholder="confirm_password">
+                </div>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

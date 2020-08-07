@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <form class="card-body col-md-6 offset-md-3" action="{{ url_for('confirmotp') }}" accept-charset="UTF-8" method="post">
+        <h3>Enter 5-Digit OTP</h3>
+        <br/>
+        <div class="md-form mb-3">
+            <input type="text" name="verification" id="verification_code" class="form-control" placeholder="Enter Verfication Code" />
+        </div>
+        <button class="btn btn-success btn-lg btn-block" type="submit">Confirm</button>
+    </form>
+</div>
+{% endblock %}
