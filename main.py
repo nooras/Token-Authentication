@@ -12,11 +12,11 @@ from flask_sqlalchemy import SQLAlchemy
 ap = Flask(__name__)
 ap.config['SECRET_KEY'] = 'kjbjjgcvbjkljhgcvbnkhgf6525125654'
 
-ap.config['SQLALCHEMY_DATABASE_URI'] = "postgres://mqekxcpatpfgcs:1c078f0dcf9fed60350475aea0ad18f8413b4da3d74a4839fc17f88f2263d6a9@ec2-3-208-50-226.compute-1.amazonaws.com:5432/d91kg3fr28it9b"
+ap.config['SQLALCHEMY_DATABASE_URI'] = "postgres://mqekxcpatpfgcs:1c078f0dcf9fed60350475aea0ad18f8413b4da3d74a4839fc17f88f2263d6a9@ec2-3-208-50-226.compute-1.amazonaws.com:5432/d91kg3fr28it9bxyz"
 dbb = SQLAlchemy(ap)
 
 headers = {
-    'authorization': "kMfOW74oSHs0NbqDxyidgEVZuBvaCnr2Qcph9t6IlmYGXzJ3TPJsVXpBIYZM3euayObF6wtv9Rlk0rzj",
+    'authorization': "kMfOW74oSHs0NbqDxyidgEVZuBvaCnr2Qcph9t6IlmYGXzJ3TPJsVXpBIYZM3euayObF6wtv9Rlk0rzjxyz",
     'cache-control': "no-cache",
     'content-type': "application/x-www-form-urlencoded"
     }
